@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ember & Ash — Fine Dining</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">Restaurntdsaf  <span>e </span> Shaan</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">Story</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Reserve</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-grain"></div>
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Est. 2019 · New York City</p>
+      <h1 class="hero-title reveal">
+        Where Fire<br/><em>Meets</em> Finesse
+      </h1>
+      <p class="hero-sub reveal">Wood-fired cuisine elevated to an art form.<br/>Every plate, a conversation.</p>
+      <div class="hero-actions reveal">
+        <a href="#contact" class="btn btn-primary">Reserve a Table</a>
+        <a href="#menu" class="btn btn-ghost">Explore Menu</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+    <div class="hero-badge">
+      <svg viewBox="0 0 120 120"><path id="textCircle" d="M 60,60 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0" fill="none"/><text><textPath href="#textCircle">MICHELIN RECOMMENDED · OPEN DAILY · SINCE 2019 ·</textPath></text></svg>
+      <div class="hero-badge-star">★</div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Wood-Fired Cuisine</span><span class="dot">·</span>
+      <span>Seasonal Ingredients</span><span class="dot">·</span>
+      <span>Craft Cocktails</span><span class="dot">·</span>
+      <span>Private Dining</span><span class="dot">·</span>
+      <span>Sommelier Selection</span><span class="dot">·</span>
+      <span>Wood-Fired Cuisine</span><span class="dot">·</span>
+      <span>Seasonal Ingredients</span><span class="dot">·</span>
+      <span>Craft Cocktails</span><span class="dot">·</span>
+      <span>Private Dining</span><span class="dot">·</span>
+      <span>Sommelier Selection</span><span class="dot">·</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-visual">
+      <div class="about-img-wrap">
+        <div class="about-img about-img-main" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80')"></div>
+        <div class="about-img about-img-accent" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80')"></div>
+        <div class="about-years">
+          <span class="about-years-num">15+</span>
+          <span class="about-years-text">Years of Culinary Excellence</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-content">
+      <p class="section-label reveal">Our Story</p>
+      <h2 class="section-title reveal">A Passion for<br/><em>Fire & Flavor</em></h2>
+      <p class="about-text reveal">Born from a belief that great cooking begins with great fire, Ember & Ash was founded by Chef Marcus Veillard in 2019. Every dish is kissed by our custom-built wood-burning hearth — sourcing only the finest seasonal produce from local Hudson Valley farms.</p>
+      <p class="about-text reveal">Our philosophy is simple: let the ingredients speak, let the fire transform, let every meal become memory.</p>
+      <div class="about-stats reveal">
+        <div class="stat">
+          <span class="stat-num">48</span>
+          <span class="stat-label">Seats</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">12</span>
+          <span class="stat-label">Seasonal Dishes</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Tasting Menus</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu-section" id="menu">
+    <div class="menu-header">
+      <p class="section-label reveal">The Menu</p>
+      <h2 class="section-title reveal">Crafted with<br/><em>Intent</em></h2>
+      <div class="menu-tabs reveal">
+        <button class="tab active" data-tab="starters">Starters</button>
+        <button class="tab" data-tab="mains">Mains</button>
+        <button class="tab" data-tab="desserts">Desserts</button>
+        <button class="tab" data-tab="drinks">Drinks</button>
+      </div>
+    </div>
+    <div class="menu-grid">
+
+      <!-- STARTERS -->
+      <div class="menu-panel active" id="starters">
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Burrata & Heirloom Tomato</h3>
+            <p>Aged balsamic reduction, smoked sea salt, torn basil, grilled sourdough</p>
+          </div>
+          <span class="menu-price">$18</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Wood-Roasted Bone Marrow</h3>
+            <p>Gremolata, caper berries, house-pickled shallots, charred baguette</p>
+          </div>
+          <span class="menu-price">$22</span>
+        </div>
+        <div class="menu-item featured">
+          <span class="menu-badge">Chef's Favorite</span>
+          <div class="menu-item-info">
+            <h3>Ember Oysters (6)</h3>
+            <p>Briefly kissed by the flame, mignonette foam, finger lime caviar</p>
+          </div>
+          <span class="menu-price">$28</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Roasted Beet Tartare</h3>
+            <p>Whipped goat cheese, candied walnuts, micro arugula, truffle vinaigrette</p>
+          </div>
+          <span class="menu-price">$16</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Smoked Salmon Crudo</h3>
+            <p>Cucumber ribbons, dill crème fraîche, salmon roe, lemon zest oil</p>
+          </div>
+          <span class="menu-price">$24</span>
+        </div>
+      </div>
+
+      <!-- MAINS -->
+      <div class="menu-panel" id="mains">
+        <div class="menu-item featured">
+          <span class="menu-badge">Signature</span>
+          <div class="menu-item-info">
+            <h3>Prime Ribeye (12oz)</h3>
+            <p>45-day dry-aged, roasted bone marrow butter, crispy shallots, ember potatoes</p>
+          </div>
+          <span class="menu-price">$68</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Whole Roasted Halibut</h3>
+            <p>Saffron beurre blanc, charred leeks, fennel salad, sea vegetables</p>
+          </div>
+          <span class="menu-price">$54</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Duck Confit</h3>
+            <p>Slow-roasted leg, cherry gastrique, lentil du Puy, crispy duck skin crumble</p>
+          </div>
+          <span class="menu-price">$46</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Wild Mushroom Risotto</h3>
+            <p>Carnaroli rice, porcini broth, aged Parmigiano, black truffle shavings</p>
+          </div>
+          <span class="menu-price">$38</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Lamb Rack (2 bones)</h3>
+            <p>Herb-crusted, roasted garlic jus, flageolet beans, charred broccolini</p>
+          </div>
+          <span class="menu-price">$62</span>
+        </div>
+      </div>
+
+      <!-- DESSERTS -->
+      <div class="menu-panel" id="desserts">
+        <div class="menu-item featured">
+          <span class="menu-badge">Must Try</span>
+          <div class="menu-item-info">
+            <h3>Ember Chocolate Lava Cake</h3>
+            <p>Single-origin Valrhona, salted caramel core, vanilla bean ice cream</p>
+          </div>
+          <span class="menu-price">$16</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Tarte Tatin</h3>
+            <p>Caramelised Granny Smith apple, flaky pastry, calvados crème anglaise</p>
+          </div>
+          <span class="menu-price">$14</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Cheese Board Selection</h3>
+            <p>Three artisan cheeses, honeycomb, house-made fig jam, candied pecans, lavosh</p>
+          </div>
+          <span class="menu-price">$22</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Seasonal Sorbet Trio</h3>
+            <p>Ask your server for today's selections, fresh herb garnish</p>
+          </div>
+          <span class="menu-price">$12</span>
+        </div>
+      </div>
+
+      <!-- DRINKS -->
+      <div class="menu-panel" id="drinks">
+        <div class="menu-item featured">
+          <span class="menu-badge">Bar Signature</span>
+          <div class="menu-item-info">
+            <h3>The Ember Old Fashioned</h3>
+            <p>Smoked bourbon, house-made demerara, charred orange peel, cedar smoke</p>
+          </div>
+          <span class="menu-price">$18</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Garden Gimlet</h3>
+            <p>London dry gin, cucumber-basil shrub, fresh lime, tonic mist</p>
+          </div>
+          <span class="menu-price">$16</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Sommelier's Wine Pairing</h3>
+            <p>Three-course curated selection by our in-house sommelier</p>
+          </div>
+          <span class="menu-price">$65</span>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h3>Zero-Proof Ash & Tonic</h3>
+            <p>Charcoal-filtered water, botanical bitters, rosemary, grapefruit</p>
+          </div>
+          <span class="menu-price">$10</span>
+        </div>
+      </div>
+
+    </div>
+    <div class="menu-footer reveal">
+      <p>Full menu and seasonal specials available upon seating.<br/>Please inform us of any dietary requirements when reserving.</p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-section" id="gallery">
+    <div class="gallery-header">
+      <p class="section-label reveal">The Experience</p>
+      <h2 class="section-title reveal">A Feast<br/><em>for the Eyes</em></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item g-tall" style="background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80')">
+        <div class="gallery-overlay"><span>The Hearth</span></div>
+      </div>
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&q=80')">
+        <div class="gallery-overlay"><span>Plated Art</span></div>
+      </div>
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80')">
+        <div class="gallery-overlay"><span>The Dining Room</span></div>
+      </div>
+      <div class="gallery-item g-wide" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80')">
+        <div class="gallery-overlay"><span>Craft & Fire</span></div>
+      </div>
+      <div class="gallery-item" style="background-image:url('https://images.unsplash.com/photo-1551218808-94e220e084d2?w=600&q=80')">
+        <div class="gallery-overlay"><span>Cocktail Bar</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="reviews-section">
+    <p class="section-label reveal" style="text-align:center">What They Say</p>
+    <h2 class="section-title reveal" style="text-align:center">Voices of<br/><em>Our Guests</em></h2>
+    <div class="reviews-track" id="reviewsTrack">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"An absolutely transcendent evening. The ember oysters and ribeye are unlike anything I've had in New York. The team treated us like family."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">J</div>
+          <div>
+            <strong>James T.</strong>
+            <span>Google Review</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Celebrated our anniversary here. From the moment we walked in, every detail was perfect. Chef Veillard even came out to greet us. Simply magical."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">S</div>
+          <div>
+            <strong>Sophia R.</strong>
+            <span>TripAdvisor</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Best tasting menu in the city. The smoked bourbon cocktail alone is worth the visit. Already planning our return for the winter menu."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">M</div>
+          <div>
+            <strong>Marco D.</strong>
+            <span>Yelp Elite</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"The wood-fired halibut is the most delicious fish dish I've ever eaten. The sommelier's pairing was on point. This place is a gem."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">A</div>
+          <div>
+            <strong>Anika P.</strong>
+            <span>OpenTable</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-nav">
+      <button class="review-btn" id="prevReview">←</button>
+      <div class="review-dots" id="reviewDots"></div>
+      <button class="review-btn" id="nextReview">→</button>
+    </div>
+  </section>
+
+  <!-- RESERVATION / CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="contact-info">
+      <p class="section-label reveal">Find Us</p>
+      <h2 class="section-title reveal">Make a<br/><em>Reservation</em></h2>
+      <div class="contact-details reveal">
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <div>
+            <strong>Address</strong>
+            <p>142 West 48th Street<br/>New York, NY 10036</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📞</span>
+          <div>
+            <strong>Reservations</strong>
+            <p>+1 (212) 555-0192</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">🕐</span>
+          <div>
+            <strong>Hours</strong>
+            <p>Tue–Fri: 5:30 PM – 11 PM<br/>Sat–Sun: 12 PM – 11 PM<br/>Monday: Closed</p>
+          </div>
+        </div>
+      </div>
+      <div class="social-links reveal">
+        <a href="#" class="social-link">Instagram</a>
+        <a href="#" class="social-link">Facebook</a>
+        <a href="#" class="social-link">Twitter</a>
+      </div>
+    </div>
+    <div class="contact-form-wrap reveal">
+      <form class="contact-form" id="reserveForm">
+        <h3>Reserve Your Table</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Marcus" required />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Veillard" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="+1 (212) 555-0000" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Date</label>
+            <input type="date" required />
+          </div>
+          <div class="form-group">
+            <label>Time</label>
+            <select>
+              <option>5:30 PM</option>
+              <option>6:00 PM</option>
+              <option>6:30 PM</option>
+              <option>7:00 PM</option>
+              <option>7:30 PM</option>
+              <option>8:00 PM</option>
+              <option>8:30 PM</option>
+              <option>9:00 PM</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Guests</label>
+          <select>
+            <option>1 Guest</option>
+            <option selected>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+            <option>5 Guests</option>
+            <option>6+ Guests</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Special Requests</label>
+          <textarea placeholder="Dietary requirements, special occasion, seating preference..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Confirm Reservation</button>
+        <div class="form-success" id="formSuccess">
+          <span>✦</span> Your reservation request has been received. We'll confirm within 2 hours.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-logo">Ember <span>&</span> Ash</div>
+      <nav class="footer-nav">
+        <a href="#about">Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Reserve</a>
+      </nav>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p>© 2025 Ember & Ash Fine Dining. All rights reserved.</p>
+      <p>142 West 48th Street, New York, NY 10036</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
