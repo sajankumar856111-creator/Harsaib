@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   navToggle?.addEventListener('click', () => {
-    console.log('Hello testing');
+    console.log('Hello testing New changes');
     navLinks.classList.toggle('open');
     const spans = navToggle.querySelectorAll('span');
     if (navLinks.classList.contains('open')) {
